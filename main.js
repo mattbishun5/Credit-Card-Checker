@@ -24,7 +24,7 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3];
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5];
 
 
-// My functions below:
+// My functions are below:
 const validateCred = (card) => {
   let cardInverted = card.slice().reverse(); //reversing Credit card number and then iterate to the left. As per lohn's algorithm.
   
