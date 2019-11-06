@@ -26,7 +26,7 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // My functions are below:
 const validateCred = (card) => {
-  let cardInverted = card.slice().reverse(); //reversing Credit card number and then iterate to the left. As per lohn's algorithm.
+  let cardInverted = card.slice().reverse(); //reversing Credit card number and then iterate to the left. As per luhn's algorithm.
   
   for (let i = 0; i < cardInverted.length; i++){
     if(i % 2 != 0){ //finding odd indexes, as these will have a modulus > 0
@@ -53,7 +53,7 @@ let invalidCards = []; //invalidCards array
   
   for (i = 0; i < cards.length; i++){
     let currCard = cards[i]; //Current card is set as the index within the cards array parameter
-    if(!validateCred(currCard)){ //if not valid then push current Card to Array
+    if(!validateCred(currCard)){ //if not valid then push current Card to Invalid cards Array
       invalidCards.push(currCard);
     }
   }
@@ -71,7 +71,7 @@ let companies = [];
     let firstDigit = invalidNums[i][0];  //Set first digit of credit card number
     switch(firstDigit){
       case 3:
-        if(companies.indexOf("Amex") === -1){  //if not in Companies array then add to it
+        if(companies.indexOf("Amex") === -1){  //if not in Companies array then add to it (-1 = not in array)
               companies.push("Amex");
         }
               break;
