@@ -61,6 +61,8 @@ let invalidCards = []; //invalidCards array
     return invalidCards;      
 } 
 
+console.log(findInvalidCards([valid1, valid2, valid3, valid4, valid5])); // Should not print anything
+
 
 const idInvalidCardCompanies = (invalidNums) => {
 
@@ -97,10 +99,9 @@ let companies = [];
   
  return companies; 
 }
-console.log(idInvalidCardCompanies([invalid1])); // Should print['visa']
-console.log(idInvalidCardCompanies([invalid2])); // Should print ['mastercard']
-console.log(idInvalidCardCompanies(batch)); // Companies that have sent invalid cards
-
+// console.log(idInvalidCardCompanies([invalid1])); // Should print['visa']
+// console.log(idInvalidCardCompanies([invalid2])); // Should print ['mastercard']
+// console.log(idInvalidCardCompanies([batch])); // Companies that have sent invalid cards
 
 
 
